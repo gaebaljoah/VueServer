@@ -1,0 +1,51 @@
+
+spring:
+  profiles:
+     active: local
+    # active: dev
+    # active: product
+  datasource:
+   driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+   username: test
+   password: test
+   jdbc-url: jdbc:log4jdbc:mariadb://121.170.188.98:33316/test?allowMultiQueries=true
+   url: jdbc:log4jdbc:mariadb://121.170.188.98:33316/test?allowMultiQueries=true
+  freemarker:
+   cache: false
+  devtools:
+   livereload:
+     enabled: true
+   restart:
+     enabled: true
+  web:
+   resources:
+     static-locations: classpath:/static/
+     add-mappings: true
+server:
+  port: 6000
+  error:
+    whitelabel:
+      enabled: true
+    path: /error
+
+
+logging:
+  level:
+    com: info
+    jdbc:
+      resultsettable: info
+      sqlonly: off
+      sqltiming: info
+      audit: off
+      resultset: off
+      connection: off
+  config: classpath:log4j2.xml
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    multiple-result-sets-enabled: false
+  #    jdbc-type-for-null: varchar
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  type-aliases-package: com.lime.api.*.vo, com.lime.api.*.dto, com.lime.framework.dto

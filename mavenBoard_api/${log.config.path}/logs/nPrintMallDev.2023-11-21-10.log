@@ -1,0 +1,61 @@
+2023-11-21 10:47:11,821 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21 10:47:11,825 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21 10:47:14,346 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:132) - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-11-21 10:47:14,386 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:201) - Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
+2023-11-21 10:47:15,013 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope(setSerializationId:283) - BeanFactory id=5b1b88bf-6c70-3463-8eae-a89723b5b9fe
+2023-11-21 10:47:15,707 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker(postProcessAfterInitialization:376) - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$909bb808] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-21 10:47:15,834 [restartedMain] INFO  org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping(afterPropertiesSet:239) - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-11-21 10:47:18,121 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(initialize:108) - Tomcat initialized with port(s): 8080 (http)
+2023-11-21 10:47:18,457 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext(prepareWebApplicationContext:292) - Root WebApplicationContext: initialization completed in 6628 ms
+2023-11-21 10:47:20,697 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer(startServer:59) - LiveReload server is running on port 35729
+2023-11-21 10:47:22,109 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext(refresh:591) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2023-11-21 10:47:22,209 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener(logMessage:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-21 10:47:22,275 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter(report:40) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-11-21 10:51:20,801 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21 10:51:20,802 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21 10:51:22,578 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:132) - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-11-21 10:51:22,626 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:201) - Finished Spring Data repository scanning in 37 ms. Found 0 JDBC repository interfaces.
+2023-11-21 10:51:23,031 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope(setSerializationId:283) - BeanFactory id=5b1b88bf-6c70-3463-8eae-a89723b5b9fe
+2023-11-21 10:51:23,378 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker(postProcessAfterInitialization:376) - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ef3280e4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-21 10:51:23,417 [restartedMain] INFO  org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping(afterPropertiesSet:239) - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-11-21 10:51:25,344 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(initialize:108) - Tomcat initialized with port(s): 6000 (http)
+2023-11-21 10:51:25,663 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext(prepareWebApplicationContext:292) - Root WebApplicationContext: initialization completed in 4858 ms
+2023-11-21 10:51:27,813 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer(startServer:59) - LiveReload server is running on port 35729
+2023-11-21 10:51:29,170 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(start:220) - Tomcat started on port(s): 6000 (http) with context path ''
+2023-11-21 10:53:56,216 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21 10:53:56,217 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21 10:53:58,062 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:132) - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-11-21 10:53:58,100 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:201) - Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+2023-11-21 10:53:58,511 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope(setSerializationId:283) - BeanFactory id=5b1b88bf-6c70-3463-8eae-a89723b5b9fe
+2023-11-21 10:53:58,848 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker(postProcessAfterInitialization:376) - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f0c470d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-21 10:53:58,886 [restartedMain] INFO  org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping(afterPropertiesSet:239) - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-11-21 10:54:00,681 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(initialize:108) - Tomcat initialized with port(s): 6000 (http)
+2023-11-21 10:54:00,977 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext(prepareWebApplicationContext:292) - Root WebApplicationContext: initialization completed in 4759 ms
+2023-11-21 10:54:02,996 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer(startServer:59) - LiveReload server is running on port 35729
+2023-11-21 10:54:04,342 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(start:220) - Tomcat started on port(s): 6000 (http) with context path ''
+2023-11-21 10:57:07,937 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21 10:57:07,938 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor(logTo:255) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21 10:57:09,629 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:132) - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-11-21 10:57:09,664 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate(registerRepositoriesIn:201) - Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces.
+2023-11-21 10:57:10,009 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope(setSerializationId:283) - BeanFactory id=5b1b88bf-6c70-3463-8eae-a89723b5b9fe
+2023-11-21 10:57:10,323 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker(postProcessAfterInitialization:376) - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d3d8da14] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-21 10:57:10,369 [restartedMain] INFO  org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping(afterPropertiesSet:239) - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-11-21 10:57:12,145 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(initialize:108) - Tomcat initialized with port(s): 6000 (http)
+2023-11-21 10:57:12,367 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext(prepareWebApplicationContext:292) - Root WebApplicationContext: initialization completed in 4409 ms
+2023-11-21 10:57:14,766 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer(startServer:59) - LiveReload server is running on port 35729
+2023-11-21 10:57:17,018 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer(start:220) - Tomcat started on port(s): 6000 (http) with context path ''

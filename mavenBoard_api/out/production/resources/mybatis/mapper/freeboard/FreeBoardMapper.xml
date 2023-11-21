@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lime.api.freeBoard.dao.FreeBoardDao">
+	<sql id="pagingPrev">
+		SELECT
+			Z.*
+		FROM(
+	</sql>
+	<sql id="pagingNext">
+		)Z
+		LIMIT #{rowStart}, #{rowCnt}
+	</sql>
+	<sql id="searchSql">
+		<if test='searchKey != null and !searchKey.equals("")'>
+			<if test='searchValue != null and !searchValue.equals("")'>
+				<choose>
+					<when test='searchKey.equals("name")'>
+						AND NAME = #{searchValue}
+					</when>
+					<when test='searchKey.equals("title")'>
+						AND TITLE = #{searchValue}
+					</when>
+				</choose>
+			</if>
+		</if>
+	</sql>
+
+	<select id="selectFreeBoardList" parameterType="SearchDto" resultType="FreeBoardDto">
+		<include refid="pagingPrev"></include>
+		SELECT
+		NUM
+		, NAME
+		, TITLE
+		, CONTENT
+		, DATE_FORMAT(REGDATE, '%Y-%m-%d') AS REGDATE
+		FROM FREEBOARD
+		WHERE 1=1
+		<include refid="searchSql"></include>
+		ORDER BY REGDATE DESC
+		<include refid="pagingNext"></include>
+	</select>
+
+	<select id="selectFreeBoardListCount" parameterType="SearchDto" resultType="int">
+		SELECT COUNT(*) FROM(
+		SELECT
+		NUM
+		, NAME
+		, TITLE
+		, CONTENT
+		, DATE_FORMAT(REGDATE, '%Y-%m-%d') AS REGDATE
+		FROM FREEBOARD
+		WHERE 1=1
+		<include refid="searchSql"></include>
+		)Z
+	</select>
+
+	<select id="selectFreeBoard" parameterType="SearchDto" resultType="FreeBoardDto">
+		SELECT
+			NUM
+			 , NAME
+			 , TITLE
+			 , CONTENT
+			 , DATE_FORMAT(REGDATE, '%Y-%m-%d') AS REGDATE
+		FROM FREEBOARD
+		WHERE 1=1
+		  AND NUM = #{seq}
+	</select>
+
+	<insert id="insertFreeBoard" parameterType="FreeBoardDto" >
+		<selectKey keyProperty="num" resultType="int" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO FREEBOARD(
+		NAME
+		, TITLE
+		, CONTENT
+		, REGDATE
+		)VALUES(
+		#{ name }
+		, #{ title }
+		, #{ content }
+		, now()
+		)
+	</insert>
+
+	<update id="updateFreeBoard" parameterType="FreeBoardDto" >
+		UPDATE FREEBOARD SET
+			TITLE = #{ title }
+						   , CONTENT = #{ content }
+		WHERE NUM = #{num}
+	</update>
+
+	<delete id="deleteFreeBoard" parameterType="FreeBoardDto" >
+		DELETE FROM FREEBOARD
+		WHERE NUM = #{num}
+	</delete>
+
+</mapper>
