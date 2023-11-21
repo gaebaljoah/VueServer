@@ -22,7 +22,7 @@ spring:
      static-locations: classpath:/static/
      add-mappings: true
 server:
-  port: 6000
+  port: 6005
   error:
     whitelabel:
       enabled: true

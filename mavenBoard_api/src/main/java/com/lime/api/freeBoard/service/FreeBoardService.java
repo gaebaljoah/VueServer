@@ -25,8 +25,8 @@ public class FreeBoardService {
 
 	}
 
-	public FreeBoardDto selectFreeBoard(SearchDto searchDto) {
-		return freeBoardDao.selectFreeBoard(searchDto);
+	public FreeBoardDto selectFreeBoard(int seq) {
+		return freeBoardDao.selectFreeBoard(seq);
 	}
 
 	public int insertFreeBoard(FreeBoardDto freeBoardDto) {

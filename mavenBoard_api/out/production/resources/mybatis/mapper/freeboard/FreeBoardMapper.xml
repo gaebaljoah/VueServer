@@ -57,7 +57,7 @@
 		)Z
 	</select>
 
-	<select id="selectFreeBoard" parameterType="SearchDto" resultType="FreeBoardDto">
+	<select id="selectFreeBoard" parameterType="int" resultType="FreeBoardDto">
 		SELECT
 			NUM
 			 , NAME

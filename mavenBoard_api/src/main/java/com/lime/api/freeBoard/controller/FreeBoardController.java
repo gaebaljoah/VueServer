@@ -15,11 +15,11 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class FreeBoardController {
 
-	@Autowired
 	private final FreeBoardService freeBoardService;
 
 	@RequestMapping("/freeBoardList")
 	public Map<String,Object> freeBoardList(SearchDto searchDto){
+		System.out.println("freeBoardList의 영역입니다");
 		Map<String,Object> map = new HashMap<String,Object>();
 		if(searchDto == null) {
 			searchDto = new SearchDto();
@@ -31,18 +31,24 @@ public class FreeBoardController {
 		map.put("searchDto", searchDto);
 		return map;
 	}
-	
+
+	@RequestMapping("/getOnePost")
+	public FreeBoardDto getOnePost(int seq){
+		System.out.println("getOnePost 영역입니다");
+		FreeBoardDto post = freeBoardService.selectFreeBoard(seq);
+		return post;
+	}
+
 	/**
 	 * insertFreeBoard - 수정로직
 	 * @param freeBoardDto
 	 * @return
 	 */
 	@RequestMapping("/insertFreeBoard.ino")
-	public Map<String,Object> insertFreeBoard(FreeBoardDto freeBoardDto){
-		Map<String,Object> map = new HashMap<String,Object>();
+	public int insertFreeBoard(FreeBoardDto freeBoardDto){
+		System.out.println("insertFreeBoard의 영역입니다.");
 		int result = freeBoardService.insertFreeBoard(freeBoardDto);
-		map.put("result", result);
-		return map;
+		return result;
 	}
 	
 	/**
@@ -51,11 +57,11 @@ public class FreeBoardController {
 	 * @return
 	 */
 	@RequestMapping("/updateFreeBoard.ino")
-	public Map<String,Object> updateFreeBoard(FreeBoardDto freeBoardDto){
+	public int updateFreeBoard(FreeBoardDto freeBoardDto){
+
 		Map<String,Object> map = new HashMap<String,Object>();
 		int result = freeBoardService.updateFreeBoard(freeBoardDto);
-		map.put("result", result);
-		return map;
+		return result;
 	}
 	
 	/**

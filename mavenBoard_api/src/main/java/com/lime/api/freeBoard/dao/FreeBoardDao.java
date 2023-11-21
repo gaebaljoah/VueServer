@@ -16,7 +16,7 @@ public interface FreeBoardDao {
 
     public int selectFreeBoardListCount(SearchDto searchDto);
 
-    public FreeBoardDto selectFreeBoard(SearchDto searchDto);
+    public FreeBoardDto selectFreeBoard(int seq);
 
     public int insertFreeBoard(FreeBoardDto freeBoardDto);
 
