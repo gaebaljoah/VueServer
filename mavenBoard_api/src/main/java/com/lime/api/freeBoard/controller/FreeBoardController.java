@@ -5,6 +5,7 @@ import com.lime.api.freeBoard.service.FreeBoardService;
 import com.lime.framework.dto.SearchDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,10 +45,15 @@ public class FreeBoardController {
 	 * @param freeBoardDto
 	 * @return
 	 */
-	@RequestMapping("/insertFreeBoard.ino")
+	@PostMapping("/insertFreeBoard.ino")
 	public int insertFreeBoard(FreeBoardDto freeBoardDto){
 		System.out.println("insertFreeBoard의 영역입니다.");
+		System.out.println("getName..?"+freeBoardDto.getName());
+		System.out.println("getContent..?"+freeBoardDto.getContent());
+		System.out.println("getTitle..?"+freeBoardDto.getTitle());
+		System.out.println("getRegdate..?"+freeBoardDto.getRegdate());
 		int result = freeBoardService.insertFreeBoard(freeBoardDto);
+		System.out.println("result...?"+result);
 		return result;
 	}
 	

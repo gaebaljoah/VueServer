@@ -74,15 +74,15 @@
 			SELECT LAST_INSERT_ID()
 		</selectKey>
 		INSERT INTO FREEBOARD(
-		NAME
-		, TITLE
-		, CONTENT
-		, REGDATE
+		 NAME
+		,TITLE
+		,CONTENT
+		,REGDATE
 		)VALUES(
-		#{ name }
-		, #{ title }
-		, #{ content }
-		, now()
+		#{name}
+		,#{title}
+		,#{content}
+		,now()
 		)
 	</insert>
 
