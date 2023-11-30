@@ -13,7 +13,6 @@ import org.apache.ibatis.type.Alias;
 @AllArgsConstructor
 @SuperBuilder
 public class SearchDto extends PagingDto{
-	private int seq;
 	private String searchKey;
 	private String searchValue;
 	

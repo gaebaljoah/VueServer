@@ -38,7 +38,7 @@ public class FreeBoardService {
 
 	}
 
-	public int deleteFreeBoard(FreeBoardDto freeBoardDto) {
-		return freeBoardDao.deleteFreeBoard(freeBoardDto);
+	public int deleteFreeBoard(int seq) {
+		return freeBoardDao.deleteFreeBoard(seq);
 	}
 }

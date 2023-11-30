@@ -95,7 +95,7 @@
 
 	<delete id="deleteFreeBoard" parameterType="FreeBoardDto" >
 		DELETE FROM FREEBOARD
-		WHERE NUM = #{num}
+		WHERE NUM = #{seq}
 	</delete>
 
 </mapper>

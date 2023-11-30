@@ -22,5 +22,5 @@ public interface FreeBoardDao {
 
     public int updateFreeBoard(FreeBoardDto freeBoardDto);
 
-    public int deleteFreeBoard(FreeBoardDto freeBoardDto);
+    public int deleteFreeBoard(int seq);
 }
